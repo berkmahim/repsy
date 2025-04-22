@@ -1,0 +1,139 @@
+{
+  "info": {
+    "_postman_id": "e9b0c1a0-6b1d-4b0e-8b5e-123456789abc",
+    "name": "Repsy API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Postman collection for testing Repsy Package Repository API."
+  },
+  "item": [
+    {
+      "name": "Upload Package",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "package.rep",
+              "type": "file",
+              "src": ""
+            },
+            {
+              "key": "meta.json",
+              "type": "file",
+              "src": ""
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:8080/ornekpaket/1.0.0",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "ornekpaket",
+            "1.0.0"
+          ]
+        },
+        "description": "Upload a new package (multipart/form-data)"
+      },
+      "response": []
+    },
+    {
+      "name": "Download meta.json",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/ornekpaket/1.0.0/meta.json",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "ornekpaket",
+            "1.0.0",
+            "meta.json"
+          ]
+        },
+        "description": "Download meta.json for a specific package/version"
+      },
+      "response": []
+    },
+    {
+      "name": "Download package.rep",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/ornekpaket/1.0.0/package.rep",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "ornekpaket",
+            "1.0.0",
+            "package.rep"
+          ]
+        },
+        "description": "Download package.rep for a specific package/version"
+      },
+      "response": []
+    },
+    {
+      "name": "List All Metadata",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/metadata",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "metadata"
+          ]
+        },
+        "description": "List all metadata records"
+      },
+      "response": [
+        {
+          "name": "Example Response",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/metadata",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "metadata"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "[\n  {\n    \"name\": \"ornekpaket\",\n    \"version\": \"1.0.0\",\n    \"author\": \"John Doe\",\n    \"dependencies\": [\n      { \"packageName\": \"math\", \"version\": \"1.0.0\" }\n    ]\n  }\n]"
+        }
+      ]
+    }
+  ]
+}

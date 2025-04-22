@@ -1,0 +1,9 @@
+{
+  "name": "ornekpaket",
+  "version": "1.0.0",
+  "author": "John Doe",
+  "dependencies": [
+    { "package": "math", "version": "1.0.0" },
+    { "package": "utils", "version": "2.1.0" }
+  ]
+}
