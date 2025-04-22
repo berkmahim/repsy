@@ -98,7 +98,3 @@ docker run -p 8080:8080 repo.repsy.io/brkmhm/testcase/repsy-api:latest
 - All business logic & storage strategy are extensible
 
 ---
-
-> **Contact:** [Your Name] · [your.email@example.com]
-> 
-> *For technical details, see code & comments. For setup, just follow the Docker or Maven instructions above.*
